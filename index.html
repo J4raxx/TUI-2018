@@ -6,30 +6,40 @@
 		<meta charset="utf-8">
 		<title>TUI-2018 Website</title>
 		<link rel="stylesheet" type="text/css" href="style/main_style.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+		<script type="text/javascript" src="scripts/getCategories.js"></script>
+		<script type="text/javascript" src="scripts/getMenu.js"></script>
+		<script src="jquery-3.3.1.js"></script>
 	</head>
 
 	<body>		
 		<div class="top_of_page">
 			<div class="main_logo_and_sections">
-				<a href="index.html"><img class = "logo" src="pics/site-logo-1.png"></a>
-				<div class="top_links">
-					<a class="top_link" href="/">Каталог</a>
-					<a class="top_link" href="/">Корзина</a>
-					<a class="top_link" href="/">Контакты</a>
-					<a class="top_link" href="/">О нас</a>
+				<div class="w3-bar w3-border w3-white">
+    				<a href="index.html" class="w3-left"><img width=39px height=39px src="pics/site-logo-1.png"></a>
+			        <a href="/" class="w3-bar-item w3-button w3-hover-yellow top_link left_link">Каталог</a>
+			        <a href="/" class="w3-bar-item w3-button w3-hover-green top_link">Корзина</a>
+			        <a href="/" class="w3-bar-item w3-button w3-hover-red top_link" >О нас</a>
+			        <a href="/" class="w3-bar-item w3-button w3-hover-blue top_link">Контакты</a>
 				</div>
 			</div>
 		</div>
-		<div class="categories">
-			<h1>Категории</h1> <br>
-			<div class="name_of_categories">
-				<a class="categorie" href="">Категория 1</a> <br>
-				<a class="categorie" href="">Категория 2</a> <br>
-				<a class="categorie" href="">Категория 3</a> <br>
-				<a class="categorie" href="">Категория 4</a> <br>
-				<a class="categorie" href="">Категория 5</a> <br>
-				<a class="categorie" href="">Категория 6</a> <br>
-				<a class="categorie" href="">Категория 7</a> <br>
+		<div class = "row">
+			<div class="sidebar">
+				<div class="categories">
+					<h1>Категории</h1>
+				</div>
+				<div class="menu">
+					<h1>Меню</h1> <br>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<h1 class="bottom_contacts">Связь с нами:</h1> <br>
+			<h6>*some shit link owo xd LMAO*</h6> <br>
+			<div class="links">
+				<a href="https://twitter.com/jaraxx_"><img class="social_link" src="pics/twitter.png"></a>
 			</div>
 		</div>
 	</body>

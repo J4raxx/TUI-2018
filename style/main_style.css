@@ -1,38 +1,44 @@
-.top_of_page{
-	display: block;
-	border: 2px;
-	border-color: black;
-}
-
-.logo{
-	width: 100px;
-	height: 100px;	
-}
-
-.main_logo{
-	width: 100px;
-	height: 100px;
-}
-.sections{
-	width: 1000px;
-	height: 1000px;
+.body{
+	width: 100%;
 }
 
 .top_link{
-	margin-right: 50px;
-	margin-bottom: 50px;
+	margin-left: 80px;
 }
 
-.top_links{
-	margin: auto;
-	text-align: center;
+.left_link{
+	margin-left: 100px;
+}
+
+.middle_of_page{
+	padding-top: 20px;
+}
+
+.row{
+	margin-top: 20px; 
+	padding-top: 10px;
 }
 
 .categories{
 	width: 200px;
-	margin-left: 10px;
+	margin: 0;
+	float: left;
 }
 
-.categorie{
-	margin-bottom: 20px;
+.menu{
+	display: inline-block;
+	margin-left: 20px; 
+}
+
+.bottom{
+	background-color: grey;
+}
+
+.bottom_contacts{
+	color: white;
+}
+
+.social_link{
+	width: 100px;
+	height: 100px
 }
