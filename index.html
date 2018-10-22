@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 		<link href="https://fonts.googleapis.com/css?family=Raleway|Slabo+27px" rel="stylesheet">
 		<script type="text/javascript" src="jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="scripts/cart.js"></script>
 	</head>
 
 	<body>		
@@ -24,9 +25,15 @@
 				</div>
 			</div>
 		</div>
+		<div class="dropdown">
+			<form action="checkout.html">
+    			<input class="w3-bar-item w3-button" type="submit" value="Proceed to checkout!" />
+			</form>
+			<a href="cart.html"><img width=45px height=45px src="pics/shopping-cart.png"></a>
+		</div>
 		<div class = "row">
 				<div class="categories">
-					<h1 class="pf-01-01">Категории</h1> <br>
+					<h1 class="pf-01-02">Категории</h1> <br>
 				</div>
 				<div id="menu-id" class="menu">
 					<script type="text/javascript">
@@ -38,23 +45,25 @@
 							.then(function(data){
 								for (var i = 0; i < data.products.length; ++i){
 									var menuItem = document.createElement('div');
-									console.log(menuItem);
 									menuItem.className = "dish_class";
-									menuItem.innerHTML = '<strong>' + data.products[i].Name + 
-									'</strong><br> Can be found in ' + data.products[i].Location + 
-									'. Cost <strong> $' + data.products[i].Price + '</strong>'
+									menuItem.innerHTML = '<strong>' + data.products[i].Name + '</strong>' +
+									'<button class="w3-button w3-hover-green" id="addtocart-id">Add To Cart!</button>' +
+									'<h5 class="price"> Cost <strong> $' + data.products[i].Price + '</strong></h5>' + 
+									'<br> Can be found in ' + data.products[i].Location;
 									myMenu.appendChild(menuItem);
+									var cartButton = document.getElementById('addtocart-id');
+									cartButton.addEventListener("click", addToCart(data.products[i], 1));
 								}
 						})
 					</script>
-					<h1 class="pf-01-02">Меню</h1> <br>
+					<h1 class="pf-01-01">Меню</h1> <br>
 				</div>
 		</div>
 		<div class="bottom">
 			<h2 class="bottom_contacts">Связь с нами:</h2> <br>
 			<h6>*some shit link owo xd LMAO*</h6> <br>
 			<div class="links">
-				<a href="https://twitter.com/jaraxx_"><img class="social_link" src="pics/twitter.png"></a>
+				<a href="https://twitter.com/jaraxx_"><img width=45px height="45px" class="social_link" src="pics/twitter.png"></a>
 			</div>
 		</div>
 	</body>

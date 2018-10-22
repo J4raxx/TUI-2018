@@ -34,8 +34,9 @@
 
 .menu{
 	display: inline-block;
-	margin-left: 100px; 
+	margin-left: 50px; 
 	border: 2px;
+	padding-bottom: 40px;
 }
 
 .bottom{
@@ -52,19 +53,40 @@
 }
 
 .dish_class{
-	padding-top: 10px;
-	margin-bottom: 10px;
-}
-
-.pf-01-01{
-	font-size: 30px;
-	font-style: italic;
-	font-family: 'Slabo 27px', serif;
+	padding-bottom: 10px;
+	width: 800px;
 }
 
 .pf-01-02{
+	font-size: 30px;
+	margin: auto;
+}
+
+.pf-01-01{
 	font-size: 45px;
 	font-style: italic;
 	font-family: 'Slabo 27px', serif;
 }
 
+.price{
+	font-size: 20px;
+	display: inline-block;
+	float: right;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    float: left;
+}
