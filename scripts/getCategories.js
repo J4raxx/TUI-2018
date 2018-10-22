@@ -4,6 +4,6 @@ async function loadJSON (url){
   return await res.json();
 }
 
-loadJSON('../1.json').then(data => {
+loadJSON('').then(data => {
   console.log(data);
 });

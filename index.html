@@ -8,16 +8,15 @@
 		<link rel="stylesheet" type="text/css" href="style/main_style.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-		<script type="text/javascript" src="scripts/getCategories.js"></script>
-		<script type="text/javascript" src="scripts/getMenu.js"></script>
-		<script src="jquery-3.3.1.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Raleway|Slabo+27px" rel="stylesheet">
+		<script type="text/javascript" src="jquery-3.3.1.js"></script>
 	</head>
 
 	<body>		
 		<div class="top_of_page">
 			<div class="main_logo_and_sections">
 				<div class="w3-bar w3-border w3-white">
-    				<a href="index.html" class="w3-left"><img width=39px height=39px src="pics/site-logo-1.png"></a>
+    				<a href="index.html" class="w3-left"><img width=45px height=45px src="pics/site-logo-1.png"></a>
 			        <a href="/" class="w3-bar-item w3-button w3-hover-yellow top_link left_link">Каталог</a>
 			        <a href="/" class="w3-bar-item w3-button w3-hover-green top_link">Корзина</a>
 			        <a href="/" class="w3-bar-item w3-button w3-hover-red top_link" >О нас</a>
@@ -26,17 +25,33 @@
 			</div>
 		</div>
 		<div class = "row">
-			<div class="sidebar">
 				<div class="categories">
-					<h1>Категории</h1>
+					<h1 class="pf-01-01">Категории</h1> <br>
 				</div>
-				<div class="menu">
-					<h1>Меню</h1> <br>
+				<div id="menu-id" class="menu">
+					<script type="text/javascript">
+						let myMenu = document.getElementById('menu-id');
+						console.log(myMenu);
+						var myRequest = new Request('menu.json');
+						fetch(myRequest)
+							.then(function(response) {return response.json();} )
+							.then(function(data){
+								for (var i = 0; i < data.products.length; ++i){
+									var menuItem = document.createElement('div');
+									console.log(menuItem);
+									menuItem.className = "dish_class";
+									menuItem.innerHTML = '<strong>' + data.products[i].Name + 
+									'</strong><br> Can be found in ' + data.products[i].Location + 
+									'. Cost <strong> $' + data.products[i].Price + '</strong>'
+									myMenu.appendChild(menuItem);
+								}
+						})
+					</script>
+					<h1 class="pf-01-02">Меню</h1> <br>
 				</div>
-			</div>
 		</div>
 		<div class="bottom">
-			<h1 class="bottom_contacts">Связь с нами:</h1> <br>
+			<h2 class="bottom_contacts">Связь с нами:</h2> <br>
 			<h6>*some shit link owo xd LMAO*</h6> <br>
 			<div class="links">
 				<a href="https://twitter.com/jaraxx_"><img class="social_link" src="pics/twitter.png"></a>

@@ -2,8 +2,14 @@
 	width: 100%;
 }
 
+
+.top_of_page{
+	size: 150%;
+}
+
 .top_link{
 	margin-left: 80px;
+	font-size: 20px;
 }
 
 .left_link{
@@ -15,7 +21,8 @@
 }
 
 .row{
-	margin-top: 20px; 
+	margin-top: 30px; 
+	margin-left: 50px;
 	padding-top: 10px;
 }
 
@@ -27,7 +34,8 @@
 
 .menu{
 	display: inline-block;
-	margin-left: 20px; 
+	margin-left: 100px; 
+	border: 2px;
 }
 
 .bottom{
@@ -42,3 +50,21 @@
 	width: 100px;
 	height: 100px
 }
+
+.dish_class{
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.pf-01-01{
+	font-size: 30px;
+	font-style: italic;
+	font-family: 'Slabo 27px', serif;
+}
+
+.pf-01-02{
+	font-size: 45px;
+	font-style: italic;
+	font-family: 'Slabo 27px', serif;
+}
+
